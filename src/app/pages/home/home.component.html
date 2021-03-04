@@ -1,7 +1,7 @@
-<div class="row">
-  <h1>Currency List</h1>
+<h1>Currency List</h1>
 
-  <ng-container *ngFor="let item of currencyList | keyvalue">
+<div class="row">
+  <div *ngFor="let item of currencyList | keyvalue" class="col-sm-6 mb-3">
     <app-card [item]="item"></app-card>
-  </ng-container>
+  </div>
 </div>
