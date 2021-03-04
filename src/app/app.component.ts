@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CurrencyService } from './services/currency.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +6,4 @@ import { CurrencyService } from './services/currency.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor(private currencyService: CurrencyService) {
-    this.currencyService.getCurrencyList().subscribe((resp) => {
-      console.log(resp);
-    });
-  }
 }
