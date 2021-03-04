@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ICurrency } from 'src/app/interfaces/Currency.interface';
 import { CurrencyService } from 'src/app/services/currency.service';
@@ -21,8 +21,6 @@ export class ListComponent implements OnInit {
 
     this.service.getCurrencyList().subscribe((resp) => {
       this.detailData = resp[id];
-      console.log('data', this.detailData);
     });
-
   }
 }

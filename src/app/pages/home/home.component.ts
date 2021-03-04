@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { ICurrency } from 'src/app/interfaces/Currency.interface';
 import { CurrencyService } from '../../services/currency.service';
 
@@ -13,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private currencyService: CurrencyService,
-    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -22,9 +20,5 @@ export class HomeComponent implements OnInit {
 
       this.currencyList = resp;
     });
-  }
-
-  onClick(key) {
-    this.router.navigate(['/list', key]);
   }
 }
